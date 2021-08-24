@@ -1,0 +1,111 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    line-height: 1.6;
+    background-image: url(./images/Background.png);
+    background-size: cover;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.header-logo {
+    position: relative;
+    background-image: url(./images/Logo.png);
+    background-size: 150px;
+}
+
+.header-title {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+
+.float {
+    display: flex;
+    float: left;
+}
+
+.card {
+    color: white;
+    background: linear-gradient(to right bottom, rgb(121, 9, 141, 0.6), rgb(81, 81, 251, 0.6));
+    padding: 10rem 0 0;
+    max-width: 35ch;
+    transform: scale(0.65, 0.65);
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 3px solid black;
+    left: 0;
+    margin-right: -1em;
+
+    transition: transform 500ms ease;
+}
+
+.card:hover {
+    transform: scale(0.70);
+    background: linear-gradient(to right bottom, rgb(121, 9, 141, 0.8), rgb(81, 81, 251, 0.8));
+}
+
+.card-content {
+    padding: 1.5rem;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.2) 10%,
+        rgba(0, 0, 0, 1)
+    );
+    height: 100%;
+}
+
+.card-title {
+    position: relative;
+    width: max-content;
+    letter-spacing: 2px;
+}
+
+.card-title::after {
+    content: "";
+    position: absolute;
+    height: 3.5px;
+    left: calc(1.5rem * -1);
+    bottom: 0;
+    width: calc(100% + 1.75rem);
+    background: rgb(255, 255, 255);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 500ms ease;
+}
+
+.card:hover .card-title::after {
+    transform: scaleX(1);
+    
+
+}
+
+.card-body {
+    color: rgb(255, 255, 255);
+}
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(255, 255, 255, 0.8);
+    padding: .4em 1em;
+    border-radius: 5px;
+}
+
+.button:hover, .button:focus {
+    background-color: rgb(255, 255, 255, 1);
+    
+}
