@@ -17,12 +17,26 @@ body {
     position: absolute;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.3);
+    float: right;
 }
 
 .header-logo {
-    position: relative;
+    position: absolute;
     background-image: url(./images/Logo.png);
-    background-size: 150px;
+    background-size: 125px;
+    width: 125px;
+    height: 100%;
+    margin-left: 2em;
+}
+
+.header-logo2 {
+    position: absolute;
+    background-image: url(./images/Logo.png);
+    background-size: 125px;
+    width: 125px;
+    height: 100%;
+    margin-left: calc(100% - (125px + 2em));
+
 }
 
 .header-title {
@@ -103,6 +117,7 @@ body {
     background-color: rgb(255, 255, 255, 0.8);
     padding: .4em 1em;
     border-radius: 5px;
+    transition: background-color 700ms ease;
 }
 
 .button:hover, .button:focus {
