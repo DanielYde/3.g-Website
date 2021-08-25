@@ -124,3 +124,18 @@ body {
     background-color: rgb(255, 255, 255, 1);
     
 }
+
+.scroll {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 80%;
+    top: 50%;
+}
+
+.scroll-plus {
+    position: relative;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
